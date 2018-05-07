@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculate</title>
+  <script>
+    function Calculator(initialValue) {
+      this.value = initialValue || 0;   
+    }
+    Calculator.prototype.add = function(y) {
+      this.value = this.value + y;
+      return this.value;
+    }
+    Calculator.prototype.substract = function(y) {
+      this.value = this.value - y;
+      return this.value;
+    }
+    Calculator.prototype.multiply = function(y) {
+      this.value = this.value * y;
+      return this.value;
+    }
+    Calculator.prototype.divide = function(y) {
+      this.value = this.value / y ;
+      return this.value;
+    }
+    Calculator.prototype.clear = function() {
+      this.value = 0;
+    }
+
+    let calculator2 = new Calculator(2);
+
+    console.log(calculator2.value + " + " + "6 = " + calculator2.add(6));
+
+    console.log(calculator2.value + " - " + "10 = " + calculator2.substract(10));
+    console.log(calculator2.value);
+      calculator2.clear();
+  </script>
+</head>
+<body>
+
+</body>
+</html>
